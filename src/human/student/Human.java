@@ -5,6 +5,10 @@ public class Human {
     String surname;
     int age;
 
+    public Human () {
+
+    }
+
     public Human(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;

@@ -6,6 +6,10 @@ public class Student extends Human {
     String faculty;
     String speciality;
 
+    public Student () {
+
+    }
+
     public Student(String name, String surname, int age, int id, int course, String faculty, String speciality) {
         super(name, surname, age);
         this.id = id;

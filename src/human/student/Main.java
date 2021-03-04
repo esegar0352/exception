@@ -1,7 +1,7 @@
 package human.student;
 
 public class Main {
-    public static void main(String[] args) throws MyStudentExeption {
+    public static void main(String[] args) {
         Student student = new Student("Andrey", "Osipov", 25, 13, 2, "Computer", "Ingener");
         Student student1 = new Student("Sergey", "Staroschuk", 22, 12, 2, "Computer", "QA");
         Student student2 = new Student("Ivan", "Ivanov", 22, 11, 2, "Computer", "Devoloper");
@@ -16,24 +16,21 @@ public class Main {
         Student student11 = new Student("Anton", "Staroschuk", 17, 2, 2, "Computer", "QA");
         Group group = new Group();
 
-        try {
-            group.addStudent(student);
-            group.addStudent(student1);
-            group.addStudent(student2);
-            group.addStudent(student3);
-            group.addStudent(student4);
-            group.addStudent(student5);
-            group.addStudent(student6);
-            group.addStudent(student7);
-            group.addStudent(student8);
-            group.addStudent(student9);
 
+        group.addStudent(student);
+        group.addStudent(student1);
+        group.addStudent(student2);
+        group.addStudent(student3);
+        group.addStudent(student4);
+        group.addStudent(student5);
+        group.addStudent(student6);
+        group.addStudent(student7);
+        group.addStudent(student8);
+        group.addStudent(student9);
 
-        } catch (MyStudentExeption e) {
-            System.out.println(e.getMessage());
-        }
+        group.deleteStudent(student3);
+        System.out.println(group.toString());
 
-
-
+        System.out.println(group.findStudent("Sidorov"));
     }
 }
